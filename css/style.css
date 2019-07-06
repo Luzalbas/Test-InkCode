@@ -1,0 +1,290 @@
+html{
+	height: 100%;
+}
+body {
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1em;
+    line-height: 1.5em;
+    padding-top: 40px; /* Relleno superior igual a la altura de la cabecera*/
+}
+#main-header {
+	background: #f5f5f5;
+	height: 40px;
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+}
+	#main-header a {
+		color: #767676;
+	}
+
+/*
+ * Logo
+ */
+
+ .logo img {
+    display: block;
+    height: 72px;
+    line-height: 24px;
+ }
+
+.site-name {
+    display: block;
+    font-weight: 100;
+    font-size: 0.9em;
+    color: #767676;
+}
+
+
+    /*
+ * Navegación
+ */
+ nav {
+	float: right;
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 100px;
+	}
+
+		nav ul li {
+			display: inline-block;
+            line-height: 40px;
+
+        }
+
+			nav ul li a img{
+				display: block;
+                text-decoration: none;
+                font-size: 12px;
+                height: 15px;
+                line-height: 24px;
+			}
+
+				nav ul li a:hover {
+					background: #0b76a6;
+                }
+
+.wrapper{
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+ #menu ul{
+	list-style-type: none;
+	text-align: center;
+ }
+  #menu li{
+	display: inline;
+	text-align: center;
+	margin: 0 10px 0 0;
+ }
+ #menu li a {
+	padding: 2px 7px 2px 7px;
+	color: #666;
+	text-decoration: none;
+	font-size: 0.9em;
+ }
+  #menu li a:hover{
+	color: #000000;
+ }
+
+
+ #navegador ul{
+	list-style-type: none;
+	text-align: center;
+	padding-top: 20px;
+ }
+ #navegador li{
+	display: inline;
+	text-align: center;
+	margin: 0 70px 0 0;
+ }
+ #navegador  li a {
+	padding: 7px 18px 7px 18px;
+	color:#ffffff;
+	text-decoration: none;
+	font-size: 2.0em;
+	border: solid 1px;
+	background: #0d1358;
+	margin-left: 50px;
+    margin-right: 40px;
+ }
+ #navegador li a:hover{
+	color: #000000;
+ }
+    /*
+ * Banner
+ */
+ .centrado{
+	margin:10px auto;
+	display:block;
+}
+
+.centrado img{
+	height: 322px;
+    width: max-content;
+}
+
+
+	#iconos ul {
+		margin: 0;
+		padding-top: 30px;
+		list-style: none;
+		text-align: center;
+		padding-right: 100px;
+	}
+
+	#iconos ul li {
+			display: inline-block;
+            line-height: 40px;
+
+        }
+
+		#iconos ul li a img{
+				display: block;
+                text-decoration: none;
+                font-size: 12px;
+				height: 26px;
+                line-height: 24px;
+			}
+
+			#iconos ul li a:hover {
+					background: #0b76a6;
+				}
+
+.icono-name{
+	display: block;
+    font-weight: 100;
+    font-size: 0.9em;
+    color: #767676;
+    text-align: center;
+	padding-right: 66px;
+	padding-bottom: 35px;
+}
+
+/*
+* Ventana modal
+*/
+
+.flex{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	overflow: auto;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.452);
+}
+
+.contenido-modal, .contenido-modal-contacto {
+	position: relative;
+	background-color: #ffffff;
+	margin: auto;
+	width: 70%;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+	animation-name: modal;
+	animation-duration: 1s;
+}
+
+@keyframes modal {
+	from{top-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.modal-body h1{
+	text-align: center;
+	weight: bold;
+	padding: 10px;
+}
+
+.modal-body p, .contenido-modal-contacto{
+	text-align: center;
+	padding: 5px;
+	font-size: 1.2em;
+}
+
+.contenedor-tabla{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+.contenedor-fila{
+	position: relative;
+	margin: auto;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.contenedor-columna{
+	display: table-cell;
+	width: 33.333333%;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+.contenedor-columna2{
+	display: table-cell;
+	width: 50%;
+	padding-left: 100px;
+	padding-right: 100px;
+
+}
+.contenedor-columna3 img{
+	width: auto;
+	height: 250px;
+
+}
+.contenedor-columna p, .contenedor-columna2 {
+	text-align: left;
+	width: 80%;
+}
+.modal-footer{
+	background:#999;
+	height:30px;
+	position: relative;
+}
+.modal-header img, .modal-header-contacto img{
+	width: 100%;
+}
+/*
+* Footer
+*/
+.div-footer{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	width:100%;
+	background:#999;
+}
+
+.footer-name{
+	text-align: center;
+}
+
+.footer-name span{
+    font-weight: 100;
+    font-size: 0.7em;
+    color: #ffffff;
+	text-align: center;
+	padding: 12px;
+	margin-right: 28px;
+}
